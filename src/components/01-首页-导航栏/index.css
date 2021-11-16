@@ -1,4 +1,9 @@
-@import "../../css/base.css";
+@import "normalize.css";
+@import "//at.alicdn.com/t/font_2940828_hy39z78f9dr.css";
+.bx {
+  margin: 0 auto;
+  width: 1205px;
+}
 #nav-bar {
   width: 100%;
   height: 140px;
@@ -13,15 +18,15 @@
   flex: 1;
   display: flex;
 }
-#nav-bar .content .top .left {
+#nav-bar .content .top > .left {
   flex: 1;
 }
-#nav-bar .content .top .left .logo {
+#nav-bar .content .top > .left .logo {
   width: 193px;
   height: 65px;
   margin: 0;
 }
-#nav-bar .content .top .left .logo a {
+#nav-bar .content .top > .left .logo a {
   width: 100%;
   height: 100%;
   display: block;
@@ -31,11 +36,62 @@
   background-repeat: no-repeat;
   background-position: center center;
 }
-#nav-bar .content .top .center {
-  background-color: cyan;
+#nav-bar .content .top > .center {
   flex: 2;
 }
-#nav-bar .content .top .right {
+#nav-bar .content .top > .center .search-bar {
+  width: 400px;
+  height: 40px;
+  margin: 0 auto;
+  border-radius: 20px;
+  border: 3px solid #999;
+  box-sizing: border-box;
+  display: flex;
+  overflow: hidden;
+}
+#nav-bar .content .top > .center .search-bar .category {
+  flex: 1;
+  border-radius: 20px 0 0 20px;
+}
+#nav-bar .content .top > .center .search-bar .category select {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 20px 0 0 20px;
+  padding-left: 10px;
+  font-size: 15px;
+  color: #666;
+  outline: none;
+}
+#nav-bar .content .top > .center .search-bar .keyword {
+  flex: 4;
+}
+#nav-bar .content .top > .center .search-bar .keyword input {
+  width: 100%;
+  height: 100%;
+  padding: 0 0 0 10px;
+  border: 0;
+  outline: none;
+  color: #666;
+  font-size: 14px;
+}
+#nav-bar .content .top > .center .search-bar .submit-btn {
+  flex: 1;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+#nav-bar .content .top > .center .search-bar .submit-btn input {
+  border-radius: 0 20px 20px 0;
+  border: 0;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  background-color: #51b257;
+  color: #fff;
+  font-size: 13px;
+  cursor: pointer;
+}
+#nav-bar .content .top > .right {
   background-color: tomato;
   flex: 1;
 }
