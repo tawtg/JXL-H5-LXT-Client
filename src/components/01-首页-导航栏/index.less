@@ -135,6 +135,7 @@
             border: 1px solid #867d7d;
             box-shadow: 5px 5px 5px 5px gray;
             position: absolute;
+            z-index: 999;
             right: 0;
             top: 60px;
             display: none;
@@ -224,8 +225,68 @@
       }
 
       .right {
-        background-color: palegoldenrod;
+        //background-color: palegoldenrod;
         flex: 1;
+        ul {
+          //background-color: cyan;
+          height: 100%;
+          display: flex;
+          justify-content: flex-end;
+          li {
+            //background-color: tomato;
+            margin-left: 20px;
+            text-align: center;
+            line-height: 40px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #666;
+            position: relative;
+            &::before {
+              margin-right: 5px;
+            }
+            &:hover .ad-pane {
+              display : block;
+            }
+
+            .ad-pane {
+              width: 240px;
+              height: 220px;
+              background-color: white;
+              position: absolute;
+              padding: 5px;
+              border-radius: 10px;
+              box-sizing: border-box;
+              top: 40px;
+              left: 50%;
+              transform: translateX(-50%);
+              display: none;
+              box-shadow: 0 0 4px 7px #dbdbdb;
+              .title {
+                font-size: 14px;
+                color: #333;
+                line-height: 26px;
+              }
+              .sub-title {
+                font-size: 12px;
+                color: #666;
+                line-height: 23px;
+              }
+              .ewm {
+                width: 145px;
+                height: 145px;
+              }
+              &::after {
+                content: "";
+                border: 5px solid transparent;
+                border-bottom-color: white;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: -10px;
+              }
+            }
+          }
+        }
       }
     }
 
