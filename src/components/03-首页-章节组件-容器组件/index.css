@@ -15,17 +15,13 @@ a {
 h5 {
   margin: 0;
 }
-.section {
-  background-color: tomato;
-}
 .section .title-bar {
   height: 32px;
-  background-color: darkcyan;
   position: relative;
 }
 .section .title-bar .title {
   text-align: center;
-  font-size: 28px;
+  font-size: 26px;
   color: #780000;
   font-weight: 700;
   letter-spacing: 2px;
