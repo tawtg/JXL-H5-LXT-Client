@@ -42,6 +42,33 @@ h5 {
   flex-wrap: wrap;
   justify-content: flex-start;
 }
+.section .container > .news-card {
+  width: 500px;
+  box-shadow: 2px -1px 10px 0 rgba(0, 0, 0, 0.15);
+}
+.section .container > .news-card ul {
+  padding: 5px 10px;
+}
+.section .container > .news-card ul li {
+  display: flex;
+  justify-content: space-between;
+  line-height: 36px;
+}
+.section .container > .news-card ul li a {
+  color: #333;
+  font-size: 15px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.section .container > .news-card ul li a:hover {
+  color: #51b257;
+}
+.section .container > .news-card ul li span {
+  min-width: 190px;
+  font-size: 15px;
+  color: #999;
+}
 .section .container .column5 {
   width: calc((100% - 4 * 30px) / 5);
   margin-bottom: 30px;

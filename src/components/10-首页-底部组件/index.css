@@ -1,0 +1,127 @@
+@import "normalize.css";
+@import "//at.alicdn.com/t/font_2940828_jh033gc73io.css";
+.bx {
+  margin: 0 auto;
+  width: 1205px;
+}
+ul,
+p {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+h5 {
+  margin: 0;
+}
+.footer {
+  height: 185px;
+  margin-top: 100px;
+  background-color: #474443;
+}
+.footer .content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+.footer .content .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 105px;
+  flex: 2;
+}
+.footer .content .left .intro {
+  font-size: 14px;
+  color: #fff;
+}
+.footer .content .left .friend-link {
+  display: flex;
+}
+.footer .content .left .friend-link li:not(:first-child) {
+  margin-left: 20px;
+}
+.footer .content .left .friend-link li a {
+  color: #fff;
+  font-size: 14px;
+}
+.footer .content .left .friend-link li a:hover {
+  color: #51b257;
+}
+.footer .content .left .ban {
+  font-size: 14px;
+  color: #999;
+}
+.footer .content .right {
+  text-align: right;
+  height: 105px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+.footer .content .right .ad-image {
+  height: 46px;
+  display: flex;
+  justify-content: flex-end;
+}
+.footer .content .right .ad-image .left-ad,
+.footer .content .right .ad-image .right-ad {
+  width: 46px;
+  height: 46px;
+  background-image: url(../../assets/images/layout_css_sprites2.png);
+  position: relative;
+  cursor: pointer;
+}
+.footer .content .right .ad-image .left-ad:hover .ewm-pane,
+.footer .content .right .ad-image .right-ad:hover .ewm-pane {
+  display: block;
+}
+.footer .content .right .ad-image .left-ad .ewm-pane,
+.footer .content .right .ad-image .right-ad .ewm-pane {
+  width: 120px;
+  height: 120px;
+  box-shadow: 0 0 10px #ccc;
+  padding: 5px;
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -125px;
+  display: none;
+}
+.footer .content .right .ad-image .left-ad .ewm-pane img,
+.footer .content .right .ad-image .right-ad .ewm-pane img {
+  width: 100%;
+  height: 100%;
+}
+.footer .content .right .ad-image .left-ad {
+  margin-right: 20px;
+  background-position: -220px -174px;
+}
+.footer .content .right .ad-image .left-ad:hover {
+  background-position: -286px -174px;
+}
+.footer .content .right .ad-image .right-ad {
+  background-position: -112px -74px;
+}
+.footer .content .right .ad-image .right-ad:hover {
+  background-position: -154px -174px;
+}
+.footer .content .right .second-line {
+  font-size: 14px;
+  color: #fff;
+}
+.footer .content .right .second-line .time {
+  padding-left: 10px;
+  font-size: 12px;
+  color: #ddd;
+}
+.footer .content .right .tel {
+  font-size: 19px;
+  color: #fff;
+  font-weight: bold;
+}
+/*# sourceMappingURL=index.css.map */
