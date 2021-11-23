@@ -1,0 +1,59 @@
+@import "../../css/base.less";
+@import "../../config/colorConfig";
+
+.fixed-contact {
+  width: 50px;
+  height: 200px;
+  //background-color: tomato;
+  position: fixed;
+  right: 30px;
+  top: 30%;
+  transform: translateY(-30%);
+  .contact,
+  .app,
+  .back-top {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+  }
+  .contact {
+    margin-bottom: 30px;
+    background-position: -83px -175px;
+    background-image: url(../../assets/images/layout_css_sprites2.png);
+    &:hover {
+      background-position: -11px -175px;
+    }
+  }
+  .app {
+    background-position: -4px -94px;
+    background-image: url(../../assets/images/layout_css_sprites.png);
+    .ewm-pane {
+      width: 120px;
+      height: 120px;
+      box-shadow: 0 0 10px #ccc;
+      padding: 5px;
+      box-sizing: border-box;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 50px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      display: none;
+    }
+    &:hover {
+      .ewm-pane {
+        display: block;
+      }
+
+      background-color: #ddd;
+    }
+  }
+  .back-top {
+    background-position: -166px 2px;
+    background-image: url(../../assets/images/layout_css_sprites.png);
+
+  }
+}
