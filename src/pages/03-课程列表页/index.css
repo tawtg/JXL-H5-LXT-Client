@@ -223,6 +223,7 @@ body {
   position: sticky;
   position: -webkit-sticky;
   top: 0;
+  z-index: 9999;
   min-width: 1205px;
   height: 40px;
   box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.04);
@@ -255,66 +256,214 @@ body {
   border: 1px solid #51b257;
   border-radius: 15px;
 }
-.teacher-list .teacher-item {
+.course-list {
   margin-top: 20px;
-  padding: 10px 15px;
+  min-height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.course-list > .course-card {
+  min-width: 200px;
+  max-width: 300px;
+  height: 252px;
   background-color: #fff;
-}
-.teacher-list .teacher-item .intro {
-  height: 80px;
-  border-bottom: 1px solid #ccc;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: auto;
+  transition: all 0.5s linear 0s;
 }
-.teacher-list .teacher-item .intro .message {
+.course-list > .course-card:hover {
+  box-shadow: 0 6px 15px 4px grey;
+  transform: translateY(-5px);
+}
+.course-list > .course-card .image {
+  width: 100%;
+  height: 164px;
+  background-color: cyan;
+  position: relative;
+}
+.course-list > .course-card .image a {
+  width: 100%;
   height: 100%;
+  overflow: hidden;
+  display: inline-block;
+}
+.course-list > .course-card .image a img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease-in-out 0s;
+}
+.course-list > .course-card .image a img:hover {
+  transform: scale(1.5, 1.5);
+}
+.course-list > .course-card .image .tag {
+  width: 48px;
+  height: 23px;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+  line-height: 23px;
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  background-image: url(../../assets/images/star_back.png);
+  background-position: -10px -58px;
+  background-repeat: no-repeat;
+  z-index: 999;
+}
+.course-list > .course-card .title {
+  background-color: pink;
+  flex: 2;
+}
+.course-list > .course-card .title a {
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+  margin-top: 10px;
+  margin-left: 10px;
+  display: inline-block;
+}
+.course-list > .course-card .title a:hover {
+  color: tomato;
+}
+.course-list > .course-card .score {
+  background-color: greenyellow;
   flex: 1;
   display: flex;
   align-items: center;
+  padding-left: 10px;
 }
-.teacher-list .teacher-item .intro .message .t-header {
-  width: 60px;
-  height: 60px;
-  border: 1px solid #51b257;
-  border-radius: 30px;
-  box-sizing: border-box;
+.course-list > .course-card .score .star {
+  width: 57px;
+  height: 10px;
+  background-image: url(../../assets/images/star_back.png);
+  background-position: -91px -58px;
 }
-.teacher-list .teacher-item .intro .message .t-profile {
-  height: 60px;
+.course-list > .course-card .score .star .y_star {
+  height: 100%;
+  background-image: url(../../assets/images/star_back.png);
+  background-position: -10px -158px;
+}
+.course-list > .course-card .score .score_text {
+  font-size: 12px;
+  color: gray;
+  margin-left: 15px;
+}
+.course-list > .course-card .zan {
+  padding-left: 10px;
+  background-color: paleturquoise;
   flex: 1;
-  padding: 10px 0 0 10px;
 }
-.teacher-list .teacher-item .intro .message .t-profile .position-name {
-  color: #424242;
-  font-size: 18px;
+.course-list > .course-card .zan .good {
+  font-size: 16px;
+  color: gray;
 }
-.teacher-list .teacher-item .intro .message .t-profile .position-name.is-star::after {
-  content: '星级讲师';
-  line-height: 20px;
-  color: #a5571b;
-  font-size: 12px;
-  background-color: #ffdaaf;
-  padding: 0 5px;
-  border-radius: 3px;
+.course-list > .course-card .zan .good::before {
+  content: "👍";
 }
-.teacher-list .teacher-item .intro .message .t-profile .class-count {
-  color: #999;
-  font-size: 12px;
-  margin-top: 8px;
+.course-list > .teacher-card {
+  margin-top: 50px;
+  min-width: 300px;
+  height: 150px;
+  box-shadow: 2px -1px 10px 0 rgba(0, 0, 0, 0.15);
+  display: flex;
 }
-.teacher-list .teacher-item .intro .to-detail {
-  width: 98px;
-  height: 34px;
-  color: #51b257;
-  border: 1px solid #51b257;
-  border-radius: 5px;
-  display: block;
-  text-align: center;
+.course-list > .teacher-card .left {
+  width: 200px;
+  position: relative;
+}
+.course-list > .teacher-card .left .t-header {
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  box-shadow: 2px -1px 10px 0 rgba(0, 0, 0, 0.15);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -30px;
+}
+.course-list > .teacher-card .left .t-header:hover {
+  animation: like-rotate 6s linear 0s infinite;
+}
+.course-list > .teacher-card .left .t-name {
+  width: 150px;
   line-height: 34px;
+  background-color: #51b257;
+  border-radius: 17px;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
 }
-.teacher-list .teacher-item .desc {
-  min-height: 80px;
-  line-height: 30px;
+.course-list > .teacher-card .right {
+  flex: 1;
+  padding: 5px;
+}
+.course-list > .teacher-card .right .t-position {
+  color: #51b257;
+  text-align: center;
+  line-height: 40px;
+  font-weight: 700;
+  border-bottom: 2px solid #51b257;
+}
+.course-list > .teacher-card .right .t-intro {
+  padding-top: 10px;
+  font-size: 16px;
+  color: #666;
+  letter-spacing: 2px;
+}
+.course-list > .news-card {
+  width: 500px;
+  box-shadow: 2px -1px 10px 0 rgba(0, 0, 0, 0.15);
+}
+.course-list > .news-card ul {
+  padding: 5px 10px;
+}
+.course-list > .news-card ul li {
+  display: flex;
+  justify-content: space-between;
+  line-height: 36px;
+}
+.course-list > .news-card ul li a {
+  color: #333;
+  font-size: 15px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.course-list > .news-card ul li a:hover {
+  color: #51b257;
+}
+.course-list > .news-card ul li span {
+  min-width: 190px;
+  font-size: 15px;
+  color: #999;
+}
+.course-list .column5 {
+  width: calc((100% - 4 * 30px) / 5);
+  margin-bottom: 30px;
+}
+.course-list .column5:not(:nth-child(5n+1)) {
+  margin-left: 30px;
+}
+.course-list .column3 {
+  width: calc((100% - 2 * 30px) / 3);
+  margin-bottom: 30px;
+}
+.course-list .column3:not(:nth-child(3n+1)) {
+  margin-left: 30px;
+}
+.course-list .column2 {
+  width: calc((100% - 3* 30px) / 2);
+  margin-bottom: 30px;
+}
+.course-list .column2:not(:nth-child(2n+1)) {
+  margin-left: 30px;
 }
 .footer {
   height: 185px;

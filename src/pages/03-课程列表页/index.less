@@ -230,7 +230,7 @@ body {
   position: sticky;
   position: -webkit-sticky;
   top: 0;
-
+  z-index: 9999;
   min-width: 1205px;
   height: 40px;
   box-shadow: 0 5px 5px 0 rgba(0,0,0,0.04);
@@ -266,72 +266,224 @@ body {
   }
 }
 
-.teacher-list {
-
-  .teacher-item {
-    //border: 1px solid tomato;
-    margin-top: 20px;
-    padding: 10px 15px;
+.course-list {
+  margin-top: 20px;
+  min-height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  &>.course-card {
+    //width: 292px;
+    //height: 351px;
+    min-width: 200px;
+    max-width: 300px;
+    height: 252px;
     background-color: #fff;
-    //box-sizing: border-box;
-    .intro {
-      height: 80px;
-      border-bottom: 1px solid #ccc;
-      display: flex;
-      align-items: center;
-      .message {
+    //margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: auto;
+    transition: all 0.5s linear 0s;
+    &:hover {
+      box-shadow: 0 6px 15px 4px grey;
+      transform: translateY(-5px);
+    }
+    .image {
+      width: 100%;
+      height: 164px;
+      background-color: cyan;
+      position: relative;
+      a {
+        width: 100%;
         height: 100%;
-        flex: 1;
-        //background-color: pink;
-        display: flex;
-        align-items: center;
-        .t-header {
-          width: 60px;
-          height: 60px;
-          border: 1px solid @themeColor;
-          border-radius: 30px;
-          box-sizing: border-box;
-        }
-        .t-profile {
-          height: 60px;
-          flex: 1;
-          //background-color: tomato;
-          padding: 10px 0 0 10px;
-          .position-name {
-            color: #424242;
-            font-size: 18px;
-            &.is-star::after {
-              content: '星级讲师';
-              line-height: 20px;
-              color: #a5571b;
-              font-size: 12px;
-              background-color: #ffdaaf;
-              padding: 0 5px;
-              border-radius: 3px;
-            }
-          }
-          .class-count {
-            color: #999;
-            font-size: 12px;
-            margin-top: 8px;
+        overflow: hidden;
+        display:inline-block;
+        img{
+          width: 100%;
+          height: 100%;
+          transition: all 0.5s ease-in-out 0s;
+          &:hover {
+            transform: scale(1.5,1.5);
           }
         }
-
       }
-      .to-detail {
-        width: 98px;
-        height: 34px;
-        color: @themeColor;
-        border: 1px solid @themeColor;
-        border-radius: 5px;
-        display: block;
+      .tag {
+        width: 48px;
+        height: 23px;
+        font-size: 12px;
+        color: white;
         text-align: center;
-        line-height: 34px;
+        line-height: 23px;
+        display: inline-block;
+        position: absolute;
+        top: 10px;
+        background-image: url(../../assets/images/star_back.png);
+        background-position: -10px -58px;
+        background-repeat: no-repeat;
+        z-index: 999;
       }
     }
-    .desc {
-      min-height: 80px;
-      line-height: 30px;
+    .title {
+      background-color: pink;
+      flex: 2;
+      a {
+        font-size: 14px;
+        color: #333;
+        text-decoration: none;
+        margin-top: 10px;
+        margin-left: 10px;
+        display: inline-block;
+        &:hover {
+          color: tomato;
+        }
+      }
+    }
+    .score {
+      background-color: greenyellow;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+      .star {
+        width: 57px;
+        height: 10px;
+        background-image: url(../../assets/images/star_back.png);
+        background-position: -91px -58px;
+        .y_star {
+          height: 100%;
+          background-image: url(../../assets/images/star_back.png);
+          background-position: -10px -158px;
+        }
+      }
+      .score_text {
+        font-size: 12px;
+        color: gray;
+        margin-left: 15px;
+      }
+    }
+    .zan {
+      padding-left: 10px;
+      background-color: paleturquoise;
+      flex: 1;
+      .good {
+        font-size: 16px;
+        color:gray;
+        &::before{
+          content:"👍"
+        }
+      }
+    }
+  }
+  &>.teacher-card {
+    margin-top: 50px;
+    min-width: 300px;
+    height: 150px;
+    box-shadow: 2px -1px 10px 0 rgba(0,0,0,0.15);
+    //background-color: tomato;
+    display: flex;
+    .left {
+      width: 200px;
+      //background-color: darkcyan;
+      position: relative;
+      .t-header {
+        width: 150px;
+        height: 150px;
+        border-radius: 75px;
+        box-shadow: 2px -1px 10px 0 rgba(0,0,0,0.15);
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -30px;
+        &:hover {
+          animation: like-rotate 6s linear 0s infinite;
+        }
+      }
+      .t-name {
+        width: 150px;
+        line-height: 34px;
+        background-color: @themeColor;
+        border-radius: 17px;
+        color: #fff;
+        text-align: center;
+        font-size: 18px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 20px;
+      }
+    }
+    .right {
+      flex: 1;
+      //background-color: deeppink;
+      padding: 5px;
+      .t-position {
+        color: @themeColor;
+        text-align: center;
+        line-height: 40px;
+        font-weight: 700;
+        border-bottom: 2px solid @themeColor;
+      }
+      .t-intro {
+        padding-top: 10px;
+        font-size: 16px;
+        color: #666;
+        letter-spacing: 2px;
+      }
+    }
+  }
+  &>.news-card {
+    width: 500px;
+    //height: 100px;
+    //background-color: tomato;
+    box-shadow: 2px -1px 10px 0 rgba(0,0,0,0.15);
+    ul {
+      padding: 5px 10px;
+      li {
+        display: flex;
+        justify-content: space-between;
+        line-height: 36px;
+        a {
+          color: #333;
+          font-size: 15px;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          &:hover {
+            color: @themeColor;
+          }
+        }
+        span {
+          min-width: 190px;
+          font-size: 15px;
+          color: #999;
+        }
+      }
+    }
+  }
+  // 额外定义
+  .column5 {
+    width: ~"calc((100% - 4 * 30px) / 5)";
+    margin-bottom: 30px;
+
+    &:not(:nth-child(5n+1)) {
+      margin-left: 30px;
+    }
+  }
+  .column3 {
+    width: ~"calc((100% - 2 * 30px) / 3)";
+    margin-bottom: 30px;
+
+    &:not(:nth-child(3n+1)) {
+      margin-left: 30px;
+    }
+  }
+  .column2 {
+    width: ~"calc((100% - 3* 30px) / 2)";
+    margin-bottom: 30px;
+
+    &:not(:nth-child(2n+1)) {
+      margin-left: 30px;
     }
   }
 }
