@@ -20,6 +20,7 @@ h5 {
 }
 .teacher-item {
   padding: 10px 15px;
+  background-color: #fff;
 }
 .teacher-item .intro {
   height: 80px;
