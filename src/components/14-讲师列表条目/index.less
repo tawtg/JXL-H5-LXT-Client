@@ -1,0 +1,67 @@
+@import "../../css/base.less";
+@import "../../config/colorConfig";
+
+.teacher-item {
+  //border: 1px solid tomato;
+  padding: 10px 15px;
+  //box-sizing: border-box;
+  .intro {
+    height: 80px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    .message {
+      height: 100%;
+      flex: 1;
+      //background-color: pink;
+      display: flex;
+      align-items: center;
+      .t-header {
+        width: 60px;
+        height: 60px;
+        border: 1px solid @themeColor;
+        border-radius: 30px;
+        box-sizing: border-box;
+      }
+      .t-profile {
+        height: 60px;
+        flex: 1;
+        //background-color: tomato;
+        padding: 10px 0 0 10px;
+        .position-name {
+          color: #424242;
+          font-size: 18px;
+          &.is-star::after {
+            content: '星级讲师';
+            line-height: 20px;
+            color: #a5571b;
+            font-size: 12px;
+            background-color: #ffdaaf;
+            padding: 0 5px;
+            border-radius: 3px;
+          }
+        }
+        .class-count {
+          color: #999;
+          font-size: 12px;
+          margin-top: 8px;
+        }
+      }
+
+    }
+    .to-detail {
+      width: 98px;
+      height: 34px;
+      color: @themeColor;
+      border: 1px solid @themeColor;
+      border-radius: 5px;
+      display: block;
+      text-align: center;
+      line-height: 34px;
+    }
+  }
+  .desc {
+    min-height: 80px;
+    line-height: 30px;
+  }
+}
