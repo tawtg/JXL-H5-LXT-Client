@@ -236,6 +236,7 @@ h5 {
   display: block;
 }
 #nav-bar .content .bottom .right ul li .ad-pane {
+  z-index: 998;
   width: 240px;
   height: 220px;
   background-color: white;
