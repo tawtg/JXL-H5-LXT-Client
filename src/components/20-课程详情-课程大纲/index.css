@@ -1,0 +1,88 @@
+@import "normalize.css";
+@import "//at.alicdn.com/t/font_2940828_jh033gc73io.css";
+.bx {
+  margin: 0 auto;
+  width: 1205px;
+}
+ul,
+p,
+dl,
+dd {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+h5,
+h3 {
+  margin: 0;
+}
+.course-dg {
+  height: 200px;
+}
+.course-dg.no-view .c-view {
+  display: none;
+}
+.course-dg .dg {
+  position: relative;
+}
+.course-dg .dg::before {
+  content: '';
+  width: 1px;
+  height: 100%;
+  background-color: pink;
+  position: absolute;
+  top: 0;
+  left: 67px;
+}
+.course-dg .dg li {
+  line-height: 40px;
+  display: flex;
+  align-items: center;
+  cursor: default;
+}
+.course-dg .dg li:hover {
+  color: #51b257;
+}
+.course-dg .dg li:hover .c-view {
+  color: #51b257;
+  border-color: #51b257;
+}
+.course-dg .dg li .c-num {
+  width: 60px;
+  font-size: 12px;
+}
+.course-dg .dg li .c-process {
+  width: 16px;
+  height: 14px;
+  z-index: 99;
+  background-color: #fff;
+  background-image: url(../../assets/images/listIcons.png);
+  background-position: -137px -113px;
+}
+.course-dg .dg li .c-process.no-finish {
+  background-position: -169px -113px;
+}
+.course-dg .dg li .c-process.finish {
+  background-position: -201px -113px;
+}
+.course-dg .dg li .c-title {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+  padding-left: 20px;
+}
+.course-dg .dg li .c-view {
+  line-height: 30px;
+  width: 70px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  font-size: 12px;
+  text-align: center;
+  color: #999;
+}
+/*# sourceMappingURL=index.css.map */

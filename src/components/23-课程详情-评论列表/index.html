@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>评论详情</title>
+	<link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<div class="comment-list">
+	<div class="comment-title">
+		评论
+	</div>
+	<div class="comment-items">
+		<div class="comment-item">
+			<div class="top">
+				<img class="user-header" src="../../assets/images/zsf.jpg" alt="">
+				<div class="message">
+					<div class="message-top">
+						<span class="user-name">疯狂的马旭</span>
+						<div class="star">
+							<div class="y_star" style="width: 100%;">
+							</div>
+						</div>
+					</div>
+					<div class="comment-time">
+						2020年12月14日 00:00:00
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				课程评价内容
+			</div>
+		</div>
+	</div>
+	<div class="comment-items">
+		<div class="comment-item">
+			<div class="top">
+				<img class="user-header" src="../../assets/images/zsf.jpg" alt="">
+				<div class="message">
+					<div class="message-top">
+						<span class="user-name">疯狂的马旭</span>
+						<div class="star">
+							<div class="y_star" style="width: 100%;">
+							</div>
+						</div>
+					</div>
+					<div class="comment-time">
+						2020年12月14日 00:00:00
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				课程评价内容
+			</div>
+		</div>
+	</div>
+	<div class="comment-items">
+		<div class="comment-item">
+			<div class="top">
+				<img class="user-header" src="../../assets/images/zsf.jpg" alt="">
+				<div class="message">
+					<div class="message-top">
+						<span class="user-name">疯狂的马旭</span>
+						<div class="star">
+							<div class="y_star" style="width: 100%;">
+							</div>
+						</div>
+					</div>
+					<div class="comment-time">
+						2020年12月14日 00:00:00
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				课程评价内容
+			</div>
+		</div>
+	</div>
+	<div class="comment-items">
+		<div class="comment-item">
+			<div class="top">
+				<img class="user-header" src="../../assets/images/zsf.jpg" alt="">
+				<div class="message">
+					<div class="message-top">
+						<span class="user-name">疯狂的马旭</span>
+						<div class="star">
+							<div class="y_star" style="width: 100%;">
+							</div>
+						</div>
+					</div>
+					<div class="comment-time">
+						2020年12月14日 00:00:00
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				课程评价内容
+			</div>
+		</div>
+	</div>
+	<div class="comment-items">
+		<div class="comment-item">
+			<div class="top">
+				<img class="user-header" src="../../assets/images/zsf.jpg" alt="">
+				<div class="message">
+					<div class="message-top">
+						<span class="user-name">疯狂的马旭</span>
+						<div class="star">
+							<div class="y_star" style="width: 100%;">
+							</div>
+						</div>
+					</div>
+					<div class="comment-time">
+						2020年12月14日 00:00:00
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				课程评价内容
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+    let score = 5;
+    // 星星评分效果
+    let star = document.getElementsByClassName("star")[0];
+    let y_star = document.getElementsByClassName("y_star")[0];
+    star.onclick = function (event) {
+        // 获取鼠标点击位置
+        // console.log(event.offsetX);
+        score = Math.ceil(event.offsetX / star.offsetWidth * 5);
+        y_star.style.width = 100 * score / 5 + "%";
+    }
+
+</script>
+<script>
+    // 点击评论后，获取评价信息。
+    let submit = document.getElementsByClassName("submit")[0];
+    let content = document.getElementsByClassName("comment-content")[0];
+    submit.onclick = function () {
+        console.log("分数：", score);
+        let content_v = content.value;
+        console.log("评论内容：", content_v);
+    }
+</script>
+</body>
+</html>

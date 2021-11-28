@@ -15,7 +15,8 @@ dd {
 a {
   text-decoration: none;
 }
-h5 {
+h5,
+h4 {
   margin: 0;
 }
 .like-lb {

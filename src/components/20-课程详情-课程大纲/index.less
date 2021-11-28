@@ -1,0 +1,75 @@
+@import "../../css/base.less";
+@import "../../config/colorConfig";
+
+.course-dg{
+  //background-color: grey;
+  &.no-view {
+    .c-view {
+      display: none;
+    }
+  }
+  height: 200px;
+  .dg {
+    position: relative;
+    &::before {
+      content: '';
+      width: 1px;
+      height: 100%;
+      background-color: pink;
+      position: absolute;
+      top: 0;
+      left: 67px;
+    }
+    li {
+      line-height: 40px;
+      //background-color: darkcyan;
+      display: flex;
+      align-items: center;
+      cursor: default;
+      &:hover {
+        color: @themeColor;
+        .c-view {
+          color: @themeColor;
+          border-color: @themeColor;
+        }
+      }
+      .c-num {
+        //background-color: pink;
+        width: 60px;
+        font-size: 12px;
+      }
+      .c-process {
+        width: 16px;
+        height: 14px;
+        z-index: 99;
+        background-color: #fff;
+        background-image: url(../../assets/images/listIcons.png);
+        background-position: -137px -113px;
+        &.no-finish {
+          background-position: -169px -113px;
+        }
+        &.finish {
+          background-position: -201px -113px;
+        }
+
+      }
+      .c-title {
+        flex: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 14px;
+        padding-left: 20px;
+      }
+      .c-view {
+        line-height: 30px;
+        width: 70px;
+        border: 1px solid #999;
+        border-radius: 5px;
+        font-size: 12px;
+        text-align: center;
+        color: #999;
+      }
+    }
+  }
+}

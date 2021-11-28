@@ -1,0 +1,68 @@
+@import "normalize.css";
+@import "//at.alicdn.com/t/font_2940828_jh033gc73io.css";
+.bx {
+  margin: 0 auto;
+  width: 1205px;
+}
+ul,
+p,
+dl,
+dd {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+h5,
+h3 {
+  margin: 0;
+}
+.course-intro-pane {
+  height: 290px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+.course-intro-pane .left {
+  width: 450px;
+  height: 250px;
+}
+.course-intro-pane .left .course-fm {
+  width: 100%;
+  height: 100%;
+}
+.course-intro-pane .right {
+  padding-left: 20px;
+  flex: 1;
+  height: 250px;
+  flex-direction: column;
+  display: flex;
+}
+.course-intro-pane .right .course-title {
+  font-size: 24px;
+  color: #333;
+}
+.course-intro-pane .right .comment-message {
+  font-size: 16px;
+  color: #666;
+  margin: 15px 0;
+}
+.course-intro-pane .right .teacher-name {
+  font-size: 18px;
+  color: #333;
+  flex: 1;
+}
+.course-intro-pane .right .get-course {
+  display: block;
+  width: 160px;
+  height: 45px;
+  background-color: #ff8000;
+  color: #fff;
+  font-size: 20px;
+  line-height: 45px;
+  text-align: center;
+}
+/*# sourceMappingURL=index.css.map */

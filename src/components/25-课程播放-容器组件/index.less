@@ -1,0 +1,171 @@
+@import "../../css/base.less";
+@import "../../config/colorConfig";
+
+.play-container {
+  min-width: 1205px;
+  height: 600px;
+  //background-color: grey;
+  display: flex;
+  &>.left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../../assets/images/courseLearn_bg.jpg);
+    &>.top {
+      width: 100%;
+      height: 50px;
+      //background-color: pink;
+      position: relative;
+      .back-course {
+        width: 106px;
+        line-height: 25px;
+        background-image: url(../../assets/images/courseLearn.png);
+        background-position: -16px -375px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #484848;
+        font-size: 12px;
+        text-align: center;
+      }
+      .pre-course {
+        width: 60px;
+        height: 32px;
+        position: absolute;
+        top: 0;
+        left: 110px;
+        //background-color: greenyellow;
+        background-image: url(../../assets/images/courseLearn.png);
+        background-position: -8px -727px;
+      }
+    }
+    &>.play-pane {
+      width: ~"calc(100% - 100px)";
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      .class-title {
+        font-size: 16px;
+        color: #fff;
+        padding: 10px 0;
+      }
+      .player {
+        flex: 1;
+        //background-color: darkcyan;
+        overflow: hidden;
+        #like-player {
+          height: 100%;
+        }
+      }
+    }
+    &>.bottom {
+      width: 100%;
+      height: 50px;
+      //background-color: pink;
+      position: relative;
+      .next-course {
+        width: 60px;
+        height: 32px;
+        position: absolute;
+        bottom: 0;
+        left: 110px;
+        //background-color: greenyellow;
+        background-image: url(../../assets/images/courseLearn.png);
+        background-position: -70px -723px;
+      }
+    }
+  }
+  &>.right {
+    width: 300px;
+    //background-color: red;
+    &>.title {
+      line-height: 45px;
+      text-align: center;
+      color: #666;
+      font-size: 18px;
+      background-image: url(../../assets/images/toolbar_tab_bg.png);
+      background-repeat: repeat-x;
+    }
+    &>.items {
+      overflow-y: auto;
+      padding: 10px;
+      box-sizing: border-box;
+      height: ~"calc(100% - 45px)";
+      .course-dg{
+        //background-color: grey;
+        &.no-view {
+          .c-view {
+            display: none;
+          }
+        }
+        height: 200px;
+        .dg {
+          position: relative;
+          &::before {
+            content: '';
+            width: 1px;
+            height: 100%;
+            background-color: pink;
+            position: absolute;
+            top: 0;
+            left: 67px;
+          }
+          li {
+            line-height: 40px;
+            //background-color: darkcyan;
+            display: flex;
+            align-items: center;
+            cursor: default;
+            &:hover {
+              color: @themeColor;
+              .c-view {
+                color: @themeColor;
+                border-color: @themeColor;
+              }
+            }
+            .c-num {
+              //background-color: pink;
+              width: 60px;
+              font-size: 12px;
+            }
+            .c-process {
+              width: 16px;
+              height: 14px;
+              z-index: 99;
+              background-color: #fff;
+              background-image: url(../../assets/images/listIcons.png);
+              background-position: -137px -113px;
+              &.no-finish {
+                background-position: -169px -113px;
+              }
+              &.finish {
+                background-position: -201px -113px;
+              }
+
+            }
+            .c-title {
+              flex: 1;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              font-size: 14px;
+              padding-left: 20px;
+            }
+            .c-view {
+              line-height: 30px;
+              width: 70px;
+              border: 1px solid #999;
+              border-radius: 5px;
+              font-size: 12px;
+              text-align: center;
+              color: #999;
+            }
+          }
+        }
+      }
+    }
+  }
+}
